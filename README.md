@@ -1,2 +1,2 @@
 # Angular7
-Codes to all the angular shit happening today
+**Please place your own firebase config file with key config in environments**
