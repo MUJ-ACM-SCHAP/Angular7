@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './home/components/dashboard/dashboard.component';
 import { TodoComponent } from './home/components/todo/todo.component';
+import { FirebaseComponent } from './home/components/firebase/firebase.component';
 
 const routes: Routes = [
  {
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
       path: 'todo',
       component: TodoComponent
+    },
+    {
+      path: 'firebase',
+      component: FirebaseComponent
     }
   ]
  }

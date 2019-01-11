@@ -1,3 +1,11 @@
-<p>
-  todo works!
-</p>
+<div *ngIf="fetched" >
+  <div class="row" >
+    <div class = "col-md-4" *ngFor="let item of todo">
+        <mat-card calss = "dark-card mat-elevation-z12">
+            <mat-card-title> {{item.title}}</mat-card-title>
+            <mat-card-actions><button class= "not" *ngIf="!item.completed" mat-button>NOT DONE</button> <button *ngIf="item.completed"mat-button class = "done">DONE</button></mat-card-actions>
+          </mat-card>
+    </div>
+  </div>
+  
+</div>

@@ -1,3 +1,35 @@
-<p>
-  dashboard works!
-</p>
+<div class = "container">
+<div class="row">
+  <div class="col-md-4">
+      <mat-form-field appearance="outline" color="accent">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="Da fuck you want?" [(ngModel)]="todo_list.title">
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+  </div>
+  <div class="col-md-4" class= "mx-auto">
+    <button mat-raised-button class = "mt-3" color="accent" (click)= "toggle()">Done?</button>
+    </div>
+    <div class="col-md-4">
+        <div class="col-md-4">
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>User ID</mat-label>
+                <input matInput placeholder="Who da fuck you?" [(ngModel)]="todo_list.id" type="number">
+                <mat-hint>Hint</mat-hint>
+              </mat-form-field>
+        </div>
+      </div>
+</div>
+
+<div class = "row">
+  <div class="mat-6 mx-auto mt-4">
+    <mat-card>
+        <mat-card-title>{{todo_list.id}}</mat-card-title>
+        <mat-card-content>{{todo_list.title}}</mat-card-content>
+        <mat-card-actions><button class= "not" *ngIf="!todo_list.completed" mat-button>NOT DONE</button> <button *ngIf="todo_list.completed"mat-button class = "done">DONE</button><br>
+        <button class = "done" mat-stroked-button color="accent" style="margin-left:1em" (click)="submit()" >Submit</button>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+</div>

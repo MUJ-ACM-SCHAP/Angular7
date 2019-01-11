@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoGeneratorService} from '../../../todo-generator.service'
 
 @Component({
   selector: 'app-todo',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+
+  fetched : Boolean = false;
+  todo : any; 
+
+  constructor(private _todoGenerator: TodoGeneratorService) { }
 
   ngOnInit() {
+    this._todoGenerator.fakeTodo().subscribe(res=>{
+      this.todo = res;
+      console.log(this.todo)
+      this.fetched = true;
+  }, err=>{
+      console.log(err)
+  })
   }
 
 }

@@ -1,0 +1,17 @@
+mat-toolbar{
+    background: rgb(18,24,27) ;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-weight: 500
+}
+.example-fill-remaining-space {
+   
+    flex: 1 1 auto;
+  }
+
+  button{
+      font-size: 41px
+  }
+  button:active, button:focus{
+      outline: none
+  }
