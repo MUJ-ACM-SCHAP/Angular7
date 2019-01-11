@@ -5,7 +5,6 @@ mat-toolbar{
     font-weight: 500
 }
 .example-fill-remaining-space {
-   
     flex: 1 1 auto;
   }
 
